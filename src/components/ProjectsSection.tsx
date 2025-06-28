@@ -9,63 +9,105 @@ import project6 from "../assets/project6.jpg"
 // ===== Project Data =====
 const projects = [
   {
-    title: "Personal Portfolio",
+    title: "Smart Expense Tracker + Budget Dashboard",
     description:
-      "Redesigned and rebuilt my portfolio for a sleeker, faster, and more professional online presence.",
+      "Responsive 3-column dashboard with expense tracking, filters, and Pie/Bar chart visualizations using Chart.js.",
     image: project1,
-    tech: [
-      "⚛️ React",
-      "🟦 TypeScript",
-      "🎞️ Framer Motion",
-      "⚡ Vite",
-      "🎨 TailwindCSS",
-    ],
-    link: "#",
+    tech: ["⚛️ React", "📊 Chart.js", "📁 LocalStorage"],
+    link: "https://smart-expense-tracker-khaki.vercel.app/",
   },
   {
-    title: "Smart Expense Tracker",
+    title: "Zenaura – Origami Pomodoro Timer",
     description:
-      "Built a responsive 3-column SaaS-style dashboard to manage expenses with real-time filtering and visual analytics.",
+      "A serene, origami-inspired Pomodoro timer app with motivational quotes, calming audio, and AssemblyAI transcription integration.",
     image: project2,
     tech: [
       "⚛️ React",
-      "📊 Chart.js",
-      "🎨 CSS3",
-      "🧠 Custom Hooks",
-      "📁 LocalStorage",
+      "📝 TypeScript",
+      "🎞️ Framer Motion",
+      "🔊 AssemblyAI",
+      "🔥 Firebase",
     ],
-    link: "#",
+    link: "https://zenaura-silk.vercel.app",
   },
   {
-    title: "Creative Portfolio",
+    title: "Full-Featured Job Tracker",
     description:
-      "Designed and built a stunning personal portfolio using React and Framer Motion animations.",
+      "Tracked job applications with search, deadlines, reminders. Used MongoDB Atlas for storage.",
     image: project3,
-    tech: ["⚛️ React", "🎞️ Framer Motion", "🖌️ Figma"],
+    tech: ["⚛️ React", "📅 Day.js", "🍃 MongoDB Atlas"],
     link: "#",
   },
   {
-    title: "E-Commerce UI",
+    title: "Dynamic Portfolio CMS",
     description:
-      "Built a modern shopping experience with cart functionality and product filters.",
+      "Editable portfolio with admin access to update content live. Used Context API and Supabase.",
     image: project4,
-    tech: ["🛒 Commerce.js", "⚛️ React", "🎨 TailwindCSS"],
+    tech: ["⚛️ React", "🧠 Context API", "🛠️ Supabase"],
     link: "#",
   },
   {
-    title: "Weather Forecast App",
+    title: "Travel Planner App",
     description:
-      "Developed a weather app pulling real-time data from OpenWeather API.",
+      "Planned trips, mapped destinations, managed itineraries using Google Maps API / LeafletJS.",
     image: project5,
-    tech: ["🌦️ OpenWeather", "⚛️ React", "🟦 TypeScript"],
+    tech: ["⚛️ React", "🗺️ LeafletJS", "📍 Google Maps API"],
     link: "#",
   },
   {
-    title: "Task Manager",
+    title: "Freelancer Invoice Generator",
     description:
-      "Created a full-stack task management app with user authentication.",
+      "Created, edited, and downloaded invoices as PDFs. Stored clients in MongoDB.",
     image: project6,
-    tech: ["🖥️ Node.js", "📦 MongoDB", "⚛️ React"],
+    tech: ["⚛️ React", "📄 jsPDF", "🍃 MongoDB"],
+    link: "#",
+  },
+  {
+    title: "Cloud-Based Resume Builder",
+    description:
+      "Users build resumes, reorder sections, and download as PDF. Data synced via Supabase.",
+    image: project1,
+    tech: ["⚛️ React", "🛠️ Supabase", "📄 jsPDF", "💨 TailwindCSS"],
+    link: "#",
+  },
+  {
+    title: "Task Dependency Planner for Teams",
+    description:
+      "Kanban board with task dependencies, priorities, and drag-and-drop interactions using DnD Kit.",
+    image: project2,
+    tech: ["⚛️ React", "🧩 DnD Kit", "🖥️ Node.js", "🍃 MongoDB"],
+    link: "#",
+  },
+  {
+    title: "Freelance CRM + Invoice Manager",
+    description:
+      "Tracked clients, projects, and invoices with full Supabase backend and PDF export via jsPDF.",
+    image: project3,
+    tech: ["⚛️ React", "🛠️ Supabase", "📄 jsPDF"],
+    link: "#",
+  },
+  {
+    title: "Daily Wellness Journal App",
+    description:
+      "Rich-text journal with mood tracking, wellness logs, and trend graphs. Used Node.js and MongoDB.",
+    image: project4,
+    tech: ["⚛️ React", "📝 Quill.js", "🖥️ Node.js", "🍃 MongoDB"],
+    link: "#",
+  },
+  {
+    title: "Personal Finance Goal Setter",
+    description:
+      "Tracked income, savings goals, and budgets with Supabase auth and Chart.js analytics.",
+    image: project5,
+    tech: ["⚛️ React", "🛠️ Supabase", "📊 Chart.js"],
+    link: "#",
+  },
+  {
+    title: "Remote Work Productivity Tracker",
+    description:
+      "Full-stack tool for logging work sessions, visualizing trends, and analyzing task focus data.",
+    image: project6,
+    tech: ["⚛️ React", "🍃 MongoDB", "🖥️ Express.js", "📊 Chart.js"],
     link: "#",
   },
 ]
