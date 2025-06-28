@@ -1,0 +1,112 @@
+/* === Matrix Grid Layout (Metro-Inspired Pastel Theme) === */
+.matrix-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    grid-auto-rows: 100px;
+    grid-auto-flow: dense;
+    gap: 16px;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  /* === Tile Base === */
+  .tile {
+    background: #f3f4f6;
+    color: #1f2937;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    font-weight: 500;
+    font-size: 0.95rem;
+  }
+  
+  .tile:hover {
+    background-color: #e5e7eb;
+    transform: scale(1.02);
+  }
+  
+  .tile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0;
+  }
+  
+  .tile-label {
+    padding: 12px;
+    z-index: 1;
+  }
+  
+  /* === Tile Sizes === */
+  .tile-s {
+    grid-column: span 1;
+    grid-row: span 1;
+    min-width: 100px;
+    min-height: 100px;
+  }
+  
+  .tile-m {
+    grid-column: span 2;
+    grid-row: span 2;
+    min-width: 200px;
+    min-height: 200px;
+  }
+  
+  .tile-l {
+    grid-column: span 3;
+    grid-row: span 3;
+    min-width: 300px;
+    min-height: 300px;
+  }
+  
+  .tile-xl {
+    grid-column: span 4;
+    grid-row: span 4;
+    min-width: 400px;
+    min-height: 400px;
+  }
+  
+  .image-wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+  
+  /* === Tile Button === */
+  .tile-button {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #cbd5e1;
+    color: #1e293b;
+    padding: 6px 14px;
+    border-radius: 9999px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+    z-index: 2;
+  }
+  
+  .tile-button:hover {
+    background: #94a3b8;
+  }
+  
+  .tile-button.ghost {
+    background: #e2e8f0;
+    color: #64748b;
+    cursor: not-allowed;
+    opacity: 0.7;
+    pointer-events: none;
+  }
+  
