@@ -31,13 +31,20 @@ const projects = [
     link: "https://zenaura-silk.vercel.app",
   },
   {
-    title: "Full-Featured Job Tracker",
+    title: "Taskbento – Bento-Style Task Manager",
     description:
-      "Tracked job applications with search, deadlines, reminders. Used MongoDB Atlas for storage.",
+      "A visual daily task manager inspired by bento layouts with claymorphic pastel tiles, drag-and-drop, and Firebase Firestore integration.",
     image: project3,
-    tech: ["⚛️ React", "📅 Day.js", "🍃 MongoDB Atlas"],
-    link: "#",
+    tech: [
+      "⚛️ React",
+      "📝 TypeScript",
+      "🎞️ Framer Motion",
+      "🔥 Firebase",
+      "💠 Styled Components",
+    ],
+    link: "https://taskbento.vercel.app/",
   },
+
   {
     title: "Dynamic Portfolio CMS",
     description:
