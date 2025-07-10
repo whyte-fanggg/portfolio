@@ -56,7 +56,6 @@ const projects = [
       "💨 TailwindCSS",
       "🌐 REST Countries API",
       "☁️ OpenWeather API",
-      "🎞️ Framer Motion",
     ],
     link: "https://globequest.vercel.app/",
   },
