@@ -46,13 +46,21 @@ const projects = [
   },
 
   {
-    title: "Dynamic Portfolio CMS",
+    title: "GlobeQuest – Country & Weather Explorer",
     description:
-      "Editable portfolio with admin access to update content live. Used Context API and Supabase.",
+      "Search any country to view its flag, population, region, languages, currencies, borders, and live weather data for its capital city in a clean, premium dashboard UI.",
     image: project4,
-    tech: ["⚛️ React", "🧠 Context API", "🛠️ Supabase"],
-    link: "#",
+    tech: [
+      "⚛️ React",
+      "📝 TypeScript",
+      "💨 TailwindCSS",
+      "🌐 REST Countries API",
+      "☁️ OpenWeather API",
+      "🎞️ Framer Motion",
+    ],
+    link: "https://globequest.vercel.app/",
   },
+
   {
     title: "Travel Planner App",
     description:
