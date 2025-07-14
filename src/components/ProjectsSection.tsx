@@ -61,13 +61,20 @@ const projects = [
   },
 
   {
-    title: "Travel Planner App",
+    title: "CodeLore – Snippet Manager + Markdown Editor",
     description:
-      "Planned trips, mapped destinations, managed itineraries using Google Maps API / LeafletJS.",
-    image: project5,
-    tech: ["⚛️ React", "🗺️ LeafletJS", "📍 Google Maps API"],
-    link: "#",
+      "A beautifully designed syntax-highlighted code snippet manager with Markdown storytelling and Supabase backend.",
+    image: project1,
+    tech: [
+      "⚛️ React",
+      "📝 TypeScript",
+      "🖋️ Markdown",
+      "🌈 PrismJS",
+      "🛠️ Supabase",
+    ],
+    link: "https://code-lore-pi.vercel.app/",
   },
+
   {
     title: "Freelancer Invoice Generator",
     description:
