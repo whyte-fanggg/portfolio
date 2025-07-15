@@ -76,13 +76,20 @@ const projects = [
   },
 
   {
-    title: "Freelancer Invoice Generator",
+    title: "Silent Auction Hub – Charity Bidding Platform",
     description:
-      "Created, edited, and downloaded invoices as PDFs. Stored clients in MongoDB.",
-    image: project6,
-    tech: ["⚛️ React", "📄 jsPDF", "🍃 MongoDB"],
-    link: "#",
+      "A full-stack auction platform for local charities to host silent auctions with real-time bidding, image uploads, admin controls, and user authentication.",
+    image: project6, // Replace with a real preview image if available
+    tech: [
+      "⚛️ React",
+      "📝 TypeScript",
+      "💨 TailwindCSS v4",
+      "🎞️ Framer Motion",
+      "🛠️ Supabase",
+    ],
+    link: "https://silent-auction-hub.vercel.app/",
   },
+
   {
     title: "Cloud-Based Resume Builder",
     description:
