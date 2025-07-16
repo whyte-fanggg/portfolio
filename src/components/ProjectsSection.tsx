@@ -64,7 +64,7 @@ const projects = [
     title: "CodeLore – Snippet Manager + Markdown Editor",
     description:
       "A beautifully designed syntax-highlighted code snippet manager with Markdown storytelling and Supabase backend.",
-    image: project1,
+    image: project5,
     tech: [
       "⚛️ React",
       "📝 TypeScript",
@@ -91,13 +91,20 @@ const projects = [
   },
 
   {
-    title: "Cloud-Based Resume Builder",
+    title: "Lunaria – Mood & Music Journal",
     description:
-      "Users build resumes, reorder sections, and download as PDF. Data synced via Supabase.",
+      "A pastel-themed, single-page app to track your daily moods and songs. Includes animated mood cards, emoji filters, mood charts, and Firebase integration for user data and logs.",
     image: project1,
-    tech: ["⚛️ React", "🛠️ Supabase", "📄 jsPDF", "💨 TailwindCSS"],
-    link: "#",
+    tech: [
+      "⚛️ React",
+      "📝 TypeScript",
+      "🎞️ Framer Motion",
+      "💨 TailwindCSS v4",
+      "🔥 Firebase",
+    ],
+    link: "https://lunaria-frontend.vercel.app/",
   },
+
   {
     title: "Task Dependency Planner for Teams",
     description:
