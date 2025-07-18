@@ -106,44 +106,18 @@ const projects = [
   },
 
   {
-    title: "Task Dependency Planner for Teams",
+    title: "LocalHarvest – Micro Produce Marketplace",
     description:
-      "Kanban board with task dependencies, priorities, and drag-and-drop interactions using DnD Kit.",
+      "A full-stack mini marketplace where local growers can list fresh produce and neighbors can reserve them. Includes image uploads, quantity-aware reservations, and pickup tracking.",
     image: project2,
-    tech: ["⚛️ React", "🧩 DnD Kit", "🖥️ Node.js", "🍃 MongoDB"],
-    link: "#",
-  },
-  {
-    title: "Freelance CRM + Invoice Manager",
-    description:
-      "Tracked clients, projects, and invoices with full Supabase backend and PDF export via jsPDF.",
-    image: project3,
-    tech: ["⚛️ React", "🛠️ Supabase", "📄 jsPDF"],
-    link: "#",
-  },
-  {
-    title: "Daily Wellness Journal App",
-    description:
-      "Rich-text journal with mood tracking, wellness logs, and trend graphs. Used Node.js and MongoDB.",
-    image: project4,
-    tech: ["⚛️ React", "📝 Quill.js", "🖥️ Node.js", "🍃 MongoDB"],
-    link: "#",
-  },
-  {
-    title: "Personal Finance Goal Setter",
-    description:
-      "Tracked income, savings goals, and budgets with Supabase auth and Chart.js analytics.",
-    image: project5,
-    tech: ["⚛️ React", "🛠️ Supabase", "📊 Chart.js"],
-    link: "#",
-  },
-  {
-    title: "Remote Work Productivity Tracker",
-    description:
-      "Full-stack tool for logging work sessions, visualizing trends, and analyzing task focus data.",
-    image: project6,
-    tech: ["⚛️ React", "🍃 MongoDB", "🖥️ Express.js", "📊 Chart.js"],
-    link: "#",
+    tech: [
+      "⚛️ React",
+      "📝 TypeScript",
+      "💨 TailwindCSS v4",
+      "🎞️ Framer Motion",
+      "🔥 Firebase",
+    ],
+    link: "https://localharvest-eta.vercel.app/",
   },
 ]
 
