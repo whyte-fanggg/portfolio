@@ -9,17 +9,31 @@ const stack: Tech[] = [
   { name: "Vite", emoji: "⚡" },
   { name: "Framer Motion", emoji: "🎞️" },
   { name: "TailwindCSS", emoji: "💨" },
-  { name: "GitHub", emoji: "🐙" },
-  { name: "CSS3", emoji: "🎨" },
+  { name: "Firebase", emoji: "🔥" },
   { name: "HTML5", emoji: "🧡" },
+  { name: "CSS3", emoji: "🎨" },
   { name: "JavaScript", emoji: "💛" },
   { name: "Node.js", emoji: "🟢" },
+  { name: "MongoDB", emoji: "🍃" },
+  { name: "Supabase", emoji: "🛠️" },
+  { name: "Chart.js", emoji: "📊" },
+  { name: "OpenAI API", emoji: "🧠" },
+  { name: "EmailJS", emoji: "✉️" },
+  { name: "Quill.js", emoji: "📝" },
+  { name: "jsPDF", emoji: "📄" },
+  { name: "Context API", emoji: "🧩" },
+  { name: "Day.js", emoji: "📅" },
+  { name: "LeafletJS", emoji: "🗺️" },
+  { name: "Express.js", emoji: "🚂" },
+  { name: "Docker", emoji: "🐳" },
 ]
 
 function TechStack() {
   return (
     <div style={{ textAlign: "center" }}>
-      <h2 style={{ fontSize: "28px", marginBottom: "30px" }}>Technologies I Work With</h2>
+      <h2 style={{ fontSize: "28px", marginBottom: "30px" }}>
+        Technologies I Work With
+      </h2>
       <div
         style={{
           display: "flex",

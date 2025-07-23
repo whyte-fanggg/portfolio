@@ -1,10 +1,9 @@
 import { useState, useEffect } from "react"
-import { FaSun, FaMoon } from "react-icons/fa"
+import logo from "../assets/logo.png" // ✅ Place your logo in src/assets/
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768)
-  const [theme, setTheme] = useState("light")
 
   useEffect(() => {
     const handleResize = () => {
@@ -12,33 +11,24 @@ function Navbar() {
       if (window.innerWidth >= 768) setMenuOpen(false)
     }
 
-    const currentTheme = document.documentElement.getAttribute("data-theme")
-    setTheme(currentTheme || "light")
-
     window.addEventListener("resize", handleResize)
     return () => window.removeEventListener("resize", handleResize)
   }, [])
 
-  const toggleTheme = () => {
-    const root = document.documentElement
-    const current = root.getAttribute("data-theme")
-    const newTheme = current === "dark" ? "light" : "dark"
-    root.setAttribute("data-theme", newTheme)
-    setTheme(newTheme)
-  }
-
   const linkStyle = {
-    color: "white",
+    color: "#0d47a1",
     textDecoration: "none",
-    padding: "10px 15px",
+    padding: "6px 12px",
     fontWeight: 500,
+    fontSize: "15px",
+    position: "relative" as const,
   }
 
   return (
     <nav
       style={{
-        backgroundColor: "var(--primary-color)",
-        padding: "10px 20px",
+        backgroundColor: "#ffffff",
+        padding: "8px 16px",
         display: "flex",
         alignItems: "center",
         justifyContent: "space-between",
@@ -48,8 +38,44 @@ function Navbar() {
         left: 0,
         right: 0,
         zIndex: 1000,
+        boxShadow: "0 2px 10px rgba(0, 0, 0, 0.05)",
       }}
     >
+      {/* Logo */}
+      <a
+        href="#home"
+        style={{ display: "flex", alignItems: "center", gap: "10px" }}
+      >
+        <img
+          src={logo}
+          alt="Logo"
+          style={{ height: "32px", width: "32px", borderRadius: "50%" }}
+        />
+        <span style={{ color: "#0d47a1", fontWeight: 600, fontSize: "18px" }}>
+          stegadgets
+        </span>
+      </a>
+
+      {/* Hover effect scoped to nav-link only */}
+      <style>{`
+        .nav-link::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: -2px;
+          width: 100%;
+          height: 2px;
+          background-color: #0d47a1;
+          transform: scaleX(0);
+          transform-origin: right;
+          transition: transform 0.3s ease;
+        }
+        .nav-link:hover::after {
+          transform: scaleX(1);
+          transform-origin: left;
+        }
+      `}</style>
+
       <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>
         {isMobile ? (
           <>
@@ -57,10 +83,10 @@ function Navbar() {
               onClick={() => setMenuOpen(!menuOpen)}
               style={{
                 background: "none",
-                border: "1px solid white",
-                color: "white",
-                padding: "6px 12px",
-                fontSize: "16px",
+                border: "1px solid #0d47a1",
+                color: "#0d47a1",
+                padding: "6px 10px",
+                fontSize: "14px",
               }}
             >
               Menu
@@ -71,20 +97,20 @@ function Navbar() {
                 style={{
                   display: "flex",
                   flexDirection: "column",
-                  backgroundColor: "var(--primary-color)",
+                  backgroundColor: "#ffffff",
                   marginTop: "10px",
                 }}
               >
-                <a href="#home" style={linkStyle}>
+                <a href="#home" className="nav-link" style={linkStyle}>
                   Home
                 </a>
-                <a href="#about" style={linkStyle}>
+                <a href="#about" className="nav-link" style={linkStyle}>
                   About
                 </a>
-                <a href="#projects" style={linkStyle}>
+                <a href="#projects" className="nav-link" style={linkStyle}>
                   Projects
                 </a>
-                <a href="#contact" style={linkStyle}>
+                <a href="#contact" className="nav-link" style={linkStyle}>
                   Contact
                 </a>
               </div>
@@ -92,34 +118,20 @@ function Navbar() {
           </>
         ) : (
           <>
-            <a href="#home" style={linkStyle}>
+            <a href="#home" className="nav-link" style={linkStyle}>
               Home
             </a>
-            <a href="#about" style={linkStyle}>
+            <a href="#about" className="nav-link" style={linkStyle}>
               About
             </a>
-            <a href="#projects" style={linkStyle}>
+            <a href="#projects" className="nav-link" style={linkStyle}>
               Projects
             </a>
-            <a href="#contact" style={linkStyle}>
+            <a href="#contact" className="nav-link" style={linkStyle}>
               Contact
             </a>
           </>
         )}
-      </div>
-
-      {/* Theme Toggle Icon */}
-      <div
-        onClick={toggleTheme}
-        style={{
-          marginTop: isMobile ? "10px" : "0",
-          cursor: "pointer",
-          fontSize: "22px",
-          color: "white",
-          padding: "6px 12px",
-        }}
-      >
-        {theme === "light" ? <FaMoon /> : <FaSun />}
       </div>
     </nav>
   )
