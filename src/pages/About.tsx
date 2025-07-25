@@ -1,6 +1,7 @@
 import { motion } from "framer-motion"
 import TechStack from "../components/TechStack"
 import WhyMe from "../components/WhyMe"
+import me from "../assets/me.jpg"
 
 function About() {
   return (
@@ -30,7 +31,7 @@ function About() {
         }}
       >
         <img
-          src="/src/assets/me.jpg"
+          src={me}
           alt="Stephen Francis"
           style={{
             width: "160px",
