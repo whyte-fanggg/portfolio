@@ -1,8 +1,58 @@
-import { useState, useRef } from "react"
-import { FaGithub, FaLinkedin } from "react-icons/fa"
+import { useState, useRef, useEffect } from "react"
+import { FaArrowUp } from "react-icons/fa"
 import emailjs from "@emailjs/browser"
 import { toast } from "react-toastify"
 import { motion } from "framer-motion"
+
+function ScrollToTopButton() {
+  const [isVisible, setIsVisible] = useState(false)
+
+  useEffect(() => {
+    const toggleVisibility = () => {
+      setIsVisible(window.scrollY > 300)
+    }
+    window.addEventListener("scroll", toggleVisibility)
+    return () => window.removeEventListener("scroll", toggleVisibility)
+  }, [])
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" })
+  }
+
+  return (
+    isVisible && (
+      <button
+        onClick={scrollToTop}
+        aria-label="Scroll to top"
+        style={{
+          position: "fixed",
+          bottom: "30px",
+          right: "30px",
+          width: "56px",
+          height: "56px",
+          borderRadius: "9999px",
+          border: "none",
+          background: "white",
+          color: "#0d47a1",
+          boxShadow: "0 6px 18px rgba(0,0,0,0.15)",
+          cursor: "pointer",
+          transition: "all 0.3s ease-in-out",
+        }}
+        onMouseEnter={(e) => {
+          e.currentTarget.style.background =
+            "linear-gradient(90deg, hsla(236, 100%, 8%, 1) 0%, hsla(211, 100%, 28%, 1) 100%)"
+          e.currentTarget.style.color = "white"
+        }}
+        onMouseLeave={(e) => {
+          e.currentTarget.style.background = "white"
+          e.currentTarget.style.color = "#0d47a1"
+        }}
+      >
+        <FaArrowUp />
+      </button>
+    )
+  )
+}
 
 function Contact() {
   const formRef = useRef<HTMLFormElement>(null)
@@ -66,22 +116,7 @@ function Contact() {
         </motion.button>
       </form>
 
-      <div className="contact-socials">
-        <a
-          href="https://www.linkedin.com/in/stephenchintalapudi-dev/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <FaLinkedin />
-        </a>
-        <a
-          href="https://github.com/whyte-fanggg"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <FaGithub />
-        </a>
-      </div>
+      <ScrollToTopButton />
     </section>
   )
 }

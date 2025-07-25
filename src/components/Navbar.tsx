@@ -52,7 +52,7 @@ function Navbar() {
           style={{ height: "32px", width: "32px", borderRadius: "50%" }}
         />
         <span style={{ color: "#0d47a1", fontWeight: 600, fontSize: "18px" }}>
-          stegadgets
+          Stephen Francis
         </span>
       </a>
 

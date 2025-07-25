@@ -128,7 +128,7 @@ function ProjectsSection() {
       {/* Section Title */}
       <h1
         style={{
-          fontSize: "clamp(32px, 6vw, 48px)",
+          fontSize: "clamp(32px, 6vw, 36px)",
           fontWeight: 700,
           textAlign: "center",
           marginBottom: "40px",
@@ -255,7 +255,7 @@ function ProjectsSection() {
                 position: "absolute",
                 bottom: "20px",
                 right: "30px",
-                backgroundColor: "var(--primary-color)",
+                background: "linear-gradient(90deg, hsla(236, 100%, 8%, 1) 0%, hsla(211, 100%, 28%, 1) 100%)",
                 color: "white",
                 padding: "12px 24px",
                 borderRadius: "50px",

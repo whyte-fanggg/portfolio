@@ -1,84 +1,76 @@
 import { motion } from "framer-motion"
-import me from "../assets/me.jpg"
 import TechStack from "../components/TechStack"
-import AboutHeader from "../components/AboutHeader"
-// import Typewriter from "../components/Typewriter"
+import WhyMe from "../components/WhyMe"
 
 function About() {
   return (
     <div
       style={{
-        maxWidth: "1000px",
-        margin: "auto",
-        padding: "60px 20px",
+        maxWidth: "1200px", // tighter container for better readability
+        margin: "0 auto",
+        padding: "40px 20px",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        gap: "60px",
+        gap: "80px", // more breathing space between sections
         textAlign: "center",
       }}
     >
-      {/* Profile Section */}
+      {/* Profile + Why Me Section */}
       <motion.div
-        initial={{ opacity: 0, y: 50 }}
+        initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
+        transition={{ duration: 0.6 }}
         viewport={{ once: true }}
         style={{
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
-          gap: "20px",
+          gap: "24px",
         }}
       >
         <img
-          src={me}
+          src="/src/assets/me.jpg"
           alt="Stephen Francis"
           style={{
             width: "160px",
             height: "160px",
             borderRadius: "50%",
             objectFit: "cover",
-            boxShadow: "0 8px 24px rgba(0, 0, 0, 0.15)",
+            boxShadow: "0 4px 12px rgba(0, 0, 0, 0.15)",
           }}
         />
-        <AboutHeader/>
-
-        <p style={{ fontSize: "18px", lineHeight: 1.6, maxWidth: "700px" }}>
-          "I'm a passionate web developer focused on creating digital
-          experiences that are fast, functional, and beautifully crafted.
-          Outside of coding, I share my knowledge as an instructor, empowering
-          the next generation of tech innovators."
-        </p>
+        <WhyMe />
       </motion.div>
 
-      {/* Tech Stack Section */}
+      {/* Tech Stack */}
       <motion.div
-        initial={{ opacity: 0, y: 50 }}
+        initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.2 }}
+        transition={{ duration: 0.6, delay: 0.2 }}
         viewport={{ once: true }}
         style={{ width: "100%" }}
       >
         <TechStack />
       </motion.div>
 
-      {/* Quote Section */}
+      {/* Mission Quote */}
       <motion.div
-        initial={{ opacity: 0, y: 50 }}
+        initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.4 }}
+        transition={{ duration: 0.6, delay: 0.3 }}
         viewport={{ once: true }}
         style={{
-          background: "linear-gradient(135deg, #1a1a1a, #4e54c8)",
+          background:
+            "linear-gradient(90deg, hsla(236, 100%, 8%, 1) 0%, hsla(211, 100%, 28%, 1) 100%)",
           color: "white",
-          padding: "30px 20px",
+          padding: "32px 24px",
           borderRadius: "16px",
-          maxWidth: "700px",
           fontSize: "20px",
           fontWeight: 600,
-          lineHeight: 1.5,
-          boxShadow: "0 6px 20px rgba(0,0,0,0.2)",
+          lineHeight: 1.6,
+          maxWidth: "720px",
+          boxShadow: "0 8px 24px rgba(0,0,0,0.2)",
         }}
       >
         "Great web applications are built at the intersection of creativity,

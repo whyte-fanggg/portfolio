@@ -1,7 +1,13 @@
 import { motion } from "framer-motion"
+import {
+  FaFacebookF,
+  FaGithub,
+  FaInstagram,
+  FaLinkedinIn,
+} from "react-icons/fa"
 import Typewriter from "../components/Typewriter"
 import ParticlesBackground from "../components/ParticlesBackground"
-import heroImage from "../assets/hero-image.png" // Update path if needed
+import heroImage from "../assets/hero-image.png"
 
 function Hero() {
   return (
@@ -27,20 +33,23 @@ function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
           style={{
-            fontSize: "clamp(1.8rem, 4vw, 3rem)", // 👇 reduced font size
+            fontSize: "clamp(1.8rem, 4vw, 3rem)",
             fontWeight: 800,
             textAlign: "left",
             marginBottom: "20px",
             lineHeight: 1.2,
           }}
         >
-          <Typewriter
-            texts={[
-              "Building Seamless Web Experiences.",
-              "Delivering Speed, Style, and Precision.",
-              "Turning Ideas into Scalable Products.",
-            ]}
-          />
+          <div style={{ display: "flex", gap: "8px", flexWrap: "wrap" }}>
+            <span style={{ fontWeight: 700 }}>I build</span>
+            <Typewriter
+              texts={[
+                "tools that solve real problems.",
+                "UI that gets out of the way.",
+                "code that feels invisible.",
+              ]}
+            />
+          </div>
         </motion.div>
 
         <motion.p
@@ -56,10 +65,11 @@ function Hero() {
             textAlign: "left",
           }}
         >
-          I craft fast, scalable, and visually polished web applications built
-          for real-world impact.
+          I care about details. The micro-interactions, the loading states, the
+          things most people never notice — that's what I craft with intention.
         </motion.p>
 
+        {/* CTA */}
         <motion.a
           href="#projects"
           initial={{ opacity: 0 }}
@@ -67,7 +77,8 @@ function Hero() {
           transition={{ duration: 2, delay: 1 }}
           style={{
             padding: "14px 30px",
-            backgroundColor: "var(--primary-color)",
+            background:
+              "linear-gradient(90deg, hsla(236, 100%, 8%, 1) 0%, hsla(211, 100%, 28%, 1) 100%)",
             color: "white",
             borderRadius: "50px",
             fontWeight: 600,
@@ -92,6 +103,76 @@ function Hero() {
         >
           Explore My Work
         </motion.a>
+
+        {/* Social Icons */}
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.2, delay: 1.4 }}
+          style={{
+            display: "flex",
+            gap: "16px",
+            marginTop: "48px",
+          }}
+        >
+          {[
+            {
+              icon: FaFacebookF,
+              url: "https://facebook.com/stephenfrancis.dev",
+              gradient: "linear-gradient(45deg, #0e5bb5, #2c72df)", // Facebook blue
+            },
+            {
+              icon: FaInstagram,
+              url: "https://instagram.com/stephenfrancis.dev",
+              gradient:
+                "linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5)", // Instagram multicolor
+            },
+            {
+              icon: FaLinkedinIn,
+              url: "https://www.linkedin.com/in/stephenchintalapudi-dev/",
+              gradient: "linear-gradient(45deg, #00497a, #006fa6)", // LinkedIn blue
+            },
+            {
+              icon: FaGithub,
+              url: "https://github.com/whyte-fanggg",
+              gradient: "linear-gradient(45deg, #161b22, #4c4177)", // GitHub dark
+            },
+          ].map(({ icon: Icon, url, gradient }, i) => (
+            <a
+              key={i}
+              href={url}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                width: "48px",
+                height: "48px",
+                borderRadius: "12px",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                background: "#f8f9fb",
+                color: "#333",
+                fontSize: "20px",
+                boxShadow: "8px 8px 16px #d1d9e6, -8px -8px 16px #ffffff",
+                transition: "all 0.3s ease-in-out",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.background = gradient
+                e.currentTarget.style.color = "white"
+                e.currentTarget.style.boxShadow =
+                  "inset 4px 4px 10px rgba(0,0,0,0.1), inset -4px -4px 10px rgba(255,255,255,0.2)"
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.background = "#f8f9fb"
+                e.currentTarget.style.color = "#333"
+                e.currentTarget.style.boxShadow =
+                  "8px 8px 16px #d1d9e6, -8px -8px 16px #ffffff"
+              }}
+            >
+              <Icon />
+            </a>
+          ))}
+        </motion.div>
       </div>
 
       {/* Right 30% */}

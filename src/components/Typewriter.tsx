@@ -29,14 +29,23 @@ function Typewriter({ texts }: Props) {
         setSubIndex((prev) => prev + (reverse ? -1 : 1))
         setText(texts[index].substring(0, subIndex))
       },
-      reverse ? 40 : 100
+      reverse ? 20 : 20
     )
 
     return () => clearTimeout(timeout)
   }, [subIndex, index, reverse, texts])
 
   return (
-    <span style={{ display: "inline-block", minWidth: "220px" }}>{text}</span>
+    <span
+      style={{
+        display: "inline-block",
+        minWidth: "200px",
+        color: "var(--primary-color)",
+        fontWeight: 700,
+      }}
+    >
+      {text}
+    </span>
   )
 }
 
